@@ -22,10 +22,10 @@ jobs:
         cd source
         npm install
         npm run generate
-    - name: checkout hanyujie.github.io site
+    - name: checkout hanyujie2002.github.io site
       uses: actions/checkout@v2
       with:
-        repository: hanyujie/hanyujie.github.io
+        repository: hanyujie2002/hanyujie2002.github.io
         path: site
         token: ${{ secrets.DEPLOY_KEY }}
     - name: Copy generated site
@@ -33,7 +33,7 @@ jobs:
     - name: Commit and push changes
       run: |
         cd site
-        git config user.name 'hanyujie'
+        git config user.name 'hanyujie2002'
         git config user.email github-actions@github.com
         git add .
         git commit -m "Deploy at $(date -u)"
