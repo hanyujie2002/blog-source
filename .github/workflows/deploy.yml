@@ -1,0 +1,40 @@
+# The github action for deploy my nuxt3 project
+
+name: Deploy to GitHub Pages
+on: [push]
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '16.14.2'
+    - name: Verify Node.js version
+      run: node --version
+    - name: Checkout source
+      uses: actions/checkout@v2
+      with:
+        path: source
+    - name: Generate
+      run: |
+        cd source
+        npm install
+        npm run generate
+    - name: checkout hanyujie.github.io site
+      uses: actions/checkout@v2
+      with:
+        repository: hanyujie/hanyujie.github.io
+        path: site
+        token: ${{ secrets.DEPLOY_KEY }}
+    - name: Copy generated site
+      run: cp -r source/.output/.public/* site
+    - name: Commit and push changes
+      run: |
+        cd site
+        git config user.name 'hanyujie'
+        git config user.email github-actions@github.com
+        git add .
+        git commit -m "Deploy at $(date -u)"
+        git push
