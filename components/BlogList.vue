@@ -5,8 +5,10 @@
             <ContentList :path="props.lang" v-slot="{ list }">
                 <div class="blog-list">
                     <div v-for="article in list" :key="article._path">
-                        <NuxtLink class="ArticleTerm" :to="article._path">
+                        <NuxtLink class="article-term" :to="article._path" >
+                            <div>
                             {{ article.title }}
+                            </div>
                         </NuxtLink>
                     </div>
                 </div>
@@ -43,6 +45,7 @@ current.value = route.path
         flex-direction: column;
         gap: 1rem;
         /* border: thick double; */
+        width: 100%;
     }
 
     .blog-list :link, .blog-list :visited {
@@ -55,10 +58,18 @@ current.value = route.path
         padding: 0.5rem 1rem;
     }
 
-    .ArticleTerm:hover {
+    .article-term:link, .article-term:visited {
+        display: block;
+        height: 5rem;
+        margin: auto;
+        border-top: thin dashed;
+        border-bottom: thin dashed;
+    }
+    .article-term:hover {
         background-color: black;
         color: white;
-        text-decoration: underline;
-        padding-right: 10rem;
+        box-shadow: unset;
+        border-top: unset;
+        border-bottom: unset;
     }
 </style>
