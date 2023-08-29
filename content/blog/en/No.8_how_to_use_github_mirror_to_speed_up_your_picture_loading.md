@@ -1,4 +1,4 @@
-If you are living in some region where the GitHub have been blocked and have already read the second article of my blog [No.2](./how-to-use-github-as-a-picture-bed) and have make a picture bed following the steps of that, you may find the picture hard to load.
+If you are living in some region where the GitHub have been blocked and have already read the second article of my blog [how-to-use-github-as-a-picture-bed] and have make a picture bed following the steps of that, you may find the picture hard to load.
 
 ### How the picture is loaded?
 
