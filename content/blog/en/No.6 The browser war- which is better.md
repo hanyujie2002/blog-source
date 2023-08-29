@@ -1,0 +1,13 @@
+![20220429152818](https://ghproxy.com/https://raw.githubusercontent.com/hanyujie2002/my_pictures/main/images/20220429152818.png)
+The browser war is divided into browser war I and browser war II.
+
+## Browser war I
+
+The browser which have the most market share at the beginning of browser war I was the Netscape browser, and Its adversaries was the IE browser developed by Microsoft.
+
+Which browser won the war, netscape or IE? The right won. In the end, the MicroSoft made a stratege that let IE browser be bundled with windows. The stratege is so controversial that some people think that MicroSoft's alleged monopoly.
+
+## Browser war II
+
+After the browser war I, the IE became the browser which had the most market share.
+Then, new competitor emerged: the Google Chrome and the Firefox, as the picture showed above, the Google Chrome win in the end of the browser war II.

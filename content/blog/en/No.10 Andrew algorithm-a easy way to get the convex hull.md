@@ -1,0 +1,40 @@
+### Background knowledge
+
+The convex hull means the outermost points in the two-dimentional plane.
+
+### Andrew algorithm
+
+The main idea of this algorithm is showed below:
+
+1. put these points in a list and sort this list by the key $x$ and then $y$.
+2. iter from the first point the end point, and judge whether pop out the stack or press the point in the stack by cross.
+3. iter from the second from the bottom to the second point, do the same as above.
+
+The code is here:
+
+```python
+def get_cross(a, b, c):
+    u = (b[0]-a[0], b[1]-a[1])
+    v = (c[0]-b[0], c[1]-b[1])
+
+    cross = u[0]*v[1] - u[1]*v[0]
+    return cross
+
+
+def andrew(n, l):  # n is the number of these points, l is the list which contain these points
+    l = [(0, 0)] + sorted(l)
+    
+    tb_l = []
+    for i in l[1:]:
+        while len(tb_l) >= 2 and get_cross(tb_l[-2], tb_l[-1], i) <= 0:
+            del tb_l[-1]
+        tb_l.append(i)
+
+    f_cvx = len(tb_l)
+    for i in l[n-1:1:-1]:
+        while len(tb_l) > f_cvx and get_cross(tb_l[-2], tb_l[-1], i) <= 0:
+            del tb_l[-1]
+        tb_l.append(i)
+
+    return tb_l
+```

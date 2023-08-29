@@ -1,0 +1,63 @@
+### Background
+
+Fibonacci series problem has been a classic problem.
+Fibonacci series is just like 1, 1, 2, 3, 5, 8 ···
+The formula of this series is just $\begin{cases} l_i = 1 (i<=2) \\ l_i = l_{i-2}+l_{i-1}(i>2) \end{cases}$
+
+### Problem
+
+given the number n, and get the $n_{st}$ number in the Fibonacci series.
+
+### Solution
+
+#### Solution one: brute force
+
+Just simulate the process
+
+```python
+def fib(n):
+ if n<=2:
+  return 1
+ a, b = 1, 1
+ for _ in range(n-2):
+  a, b = b, a+b 
+
+ return b
+```
+
+#### Solution two: matrix fast exponentiation
+
+To understand this algorithm, you should have some knowledge of **linear algebra** and **fast exponentiation.**
+
+If the determinate we have now is $(a, b)$, and the next determinate we want to get by linear transformation is $(b, a+b)$, what should we do?
+
+It's easy to draw that (a, b) *$\begin{pmatrix}{0}&{1}\\{1}&{1}\end{pmatrix}$ = (b, a+b)
+The matrix fast exponentiation is a combination of matrix and exponentiation, so the result is the first row and the second col num of $\begin{pmatrix}{1}&{1}\\{0}&{0}\end{pmatrix}$* $\begin{pmatrix}{0}&{1}\\{1}&{1}\end{pmatrix} ^ {n-2}$
+
+```python
+def m_mul(a, b):
+	ans_m = [[0 for _ in range(2)] for _ in range(2)]
+	for k in range(2):
+		for i in range(2):
+			for j in range(2):
+	   			ans_m[i][j] += a[i][k]*a[k][j]
+	   			ans_m[i][j] %= MOD
+
+  return ans_m
+
+
+def fib(n):
+	if n <= 2:
+		return 1
+
+	ans_m = [[1, 1], [0, 0]]
+	base_m = [[0, 1], [1, 1]]
+	k = n-2
+	while k:
+		if k&1:
+			ans_m = ans_m * base_m 
+		base_m *= base_m
+		k >>= 1
+
+	return ans_m[0][1]
+```

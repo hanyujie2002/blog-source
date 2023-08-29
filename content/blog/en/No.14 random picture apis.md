@@ -1,0 +1,15 @@
+1. 韩小韩API
+<https://api.vvhan.com/api/acgimg>
+![https://api.vvhan.com/api/acgimg](https://api.vvhan.com/api/acgimg)
+2. 樱花API
+<http://www.dmoe.cc/random.php>
+![http://www.dmoe.cc/random.php](http://www.dmoe.cc/random.php)
+3. 岁月小筑API
+<https://img.xjh.me/random_img.php?return=302>
+![https://img.xjh.me/random_img.php?return=302](https://img.xjh.me/random_img.php?return=302)
+4. 一叶三秋API
+<https://api.ghser.com/random/api.php>
+![https://api.ghser.com/random/api.php](https://api.ghser.com/random/api.php)
+5. 呓喵酱API
+<https://api.yimian.xyz/img>
+![https://api.yimian.xyz/img](https://api.yimian.xyz/img)

@@ -1,0 +1,37 @@
+![random](https://api.ixiaowai.cn/api/api.php)
+
+Have you ever used github? If you don't know, you can just understand it as a website which is very popular among programmers.
+
+Despite the main function which programmers used to cowork with the other programmers, you can also use github as a picture bed. If you are living in some nations which you can't visit github fluently, this method may not be suitable for you.
+
+If you are a blogger, you must be skilled enough to use Markdown to express your opinion, however you must know that how hard it is to find a fitting picture bed.Some one who is geek will try to build the picture bed with their own VPS. However, there are many weakness that they can't avoid.
+
+1. The VPS is usually a large cost.
+2. The storage limit of a VPS is usually small if you hope to write you blog for a long time.
+
+Then, it is a good idea to use Github as a picture bed.
+
+## Follow the next steps to make your own picture bed freely
+
+### 1. Download VSCode
+
+$\color{red}{attention: VScode\;are\;not\;equal\;to\;Visual\;Studio!}$
+Vscode offcial link:
+[https://code.visualstudio.com/](https://code.visualstudio.com/)
+
+Then, download a important extension of VSCode named PicGo.
+![20220425214843](https://raw.githubusercontent.com/hanyujie2002/my_pictures/main/images/20220425214843.png)
+
+Visit Github [https://github.com](https://github.com)
+Next, sign up, if you already have an account, just sign in.
+Then, just make a new repository which you will use as your own picture bed.
+
+Then, make your own access tokens. Remember: the tokens is very important, don't tell other people if you don't trust in him/her.
+![20220425215710](https://raw.githubusercontent.com/hanyujie2002/my_pictures/main/images/20220425215710.png)
+
+Then, open the VSCode, input these informations in your settings.
+
+Then, if you want to paste a picture from your clipboard, type <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>U</kbd>
+If you want to paste a picture from a file in your computer, type <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>E</kbd>
+
+That's all, thank you!φ(゜▽゜*)♪

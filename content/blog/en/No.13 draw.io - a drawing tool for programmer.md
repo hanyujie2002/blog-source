@@ -1,0 +1,21 @@
+### Background
+
+Are you fed up with windows drawing? I have had enough of it anyway. If you are the same to me, you can try Draw.io.
+
+### Why Draw.io?
+
+##### Powerful
+
+Draw.io is a powerful tool for drawing diagram. It's easy to draw UML and flowcharts with it, what's better is that there are many example in it so that you don't have to start form zero.
+
+##### Easy to export
+
+You can easily export your picture as $.png$ format or $.svg$ format, which is quite common in daily life and easy to view in browsers.
+
+##### Multi ends
+
+As Draw.io is a web app, It's easy to use on multi ends where there is a browser supporting JavaScript, there are also an unofficial plugin of Draw.io for VS Code, so it's quiet programmer-friendly. 
+
+##### Markdown supported
+
+It is exciting that Markdown is supported by Draw.io, so math formulas are easy to type in Draw.io.
