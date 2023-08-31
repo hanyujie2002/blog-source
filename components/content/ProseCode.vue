@@ -6,9 +6,7 @@
 
 <style scoped>
     .hello {
-        background-color: black;
-        margin-left: 3%;
-        margin-right: 3%;
+        background-color: #282a36;
         padding: 0 0.3rem;
         border: thick double white;
         overflow-x: auto;
