@@ -5,7 +5,7 @@
             <ContentList :path="props.lang" v-slot="{ list }">
                 <div class="blog-list">
                     <div v-for="article in list" :key="article._path">
-                        <NuxtLink class="article-term" :to="article._path" >
+                        <NuxtLink class="article-term" :to="article._path">
                             <div>
                             {{ article.title }}
                             </div>
@@ -46,6 +46,7 @@ current.value = route.path
         gap: 1rem;
         /* border: thick double; */
         width: 100%;
+        margin-bottom: 1rem;
     }
 
     .blog-list :link, .blog-list :visited {
@@ -62,14 +63,12 @@ current.value = route.path
         display: block;
         height: 5rem;
         margin: auto;
-        border-top: thin dashed;
-        border-bottom: thin dashed;
+        outline: black dashed;
     }
     .article-term:hover {
         background-color: black;
         color: white;
         box-shadow: unset;
-        border-top: unset;
-        border-bottom: unset;
+        outline: unset;
     }
 </style>
