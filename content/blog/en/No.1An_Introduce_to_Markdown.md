@@ -35,3 +35,8 @@ Unordered list if just list like this:
 * When you want to type $a^b$, just type `$a^b$`
 * when you want to type $a_b$, just type `$a_b$`
 * when you want to type $\frac{a}{b}$, just type `$\frac{a}{b}$`
+
+$$ \\begin{align}
+ y &= mx + b \\\\
+   &= ab + c  
+\\end{align} $$

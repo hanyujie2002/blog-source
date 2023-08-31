@@ -4,12 +4,12 @@
 
 ## EXAMPLE PROBLEM
 
-$$\begin{cases}
+$\begin{cases}
    z = 3x_1 + 4x_2 + x_3 \\
    x_1 + 6x_2 + 2x_3 \geq 5 \\
    2x_1 \geq 3 \\
    x_1, x_2, x_3 \in\natnums
-\end{cases}$$
+\end{cases}$
 
 **Please find the minimum value of z.**
 

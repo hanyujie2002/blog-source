@@ -4,12 +4,12 @@ Nonlinear programming is the dedicated means by which solving nonlinear function
 
 ## Example problem:
 
-$$\begin{cases}
+$\begin{cases}
 f(x)_{min} = 2x_1^2 - 4x_1x_2 + 4x_2^2 - 6x_1 - 3x_2 \\
 x_1 + x_2 \leq 3 \\
 4x_1 + x_2 \leq 9 \\
 x_1, x_2 \geq 0
-\end{cases}$$
+\end{cases}$
 
 We use the Scipy module of Python3 dedicated for mathematical and scientifical problem to solve this problem.
 
@@ -38,11 +38,12 @@ x0 corresponds to the start point to which you guess where the input the answer 
 method is the method you hope to use during solving the problem as its name shows.
 
 constrains are the constrains showed in the problem and that of the problem above is:
-$$\begin{cases}
+
+$\begin{cases}
 x_1 + x_2 \leq 3 \\
 4x_1 + x_2 \leq 9 \\
 x_1, x_2 \geq 0
-\end{cases}$$
+\end{cases}$
 
 Then, this problem is just easy to solve in less than one second after the problem has been described clearly to the computer.
 
