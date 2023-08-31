@@ -32,7 +32,7 @@ const props = defineProps(['lang'])
 
 // get the uri of the current page
 const route = useRoute()
-console.log(route.path)
+// console.log(route.path)
 
 const current = useState('current_page')
 current.value = route.path
