@@ -24,11 +24,10 @@ useHead({
   }
 
   body::-webkit-scrollbar-thumb {
-    background-color: white;
-    border-radius: 1rem;
+    background-color: black;
   }
 
   body::-webkit-scrollbar-track {
-    background-color: black;
+    background-color: white;
   }
 </style>

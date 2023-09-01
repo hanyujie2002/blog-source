@@ -5,7 +5,7 @@
             <ContentList :path="props.lang" v-slot="{ list }">
                 <div class="blog-list">
                     <div v-for="article in list" :key="article._path">
-                        <NuxtLink class="article-term" :to="article._path">
+                        <NuxtLink class="article-term" :to="article._path" tabindex="0">
                             <div>
                             {{ article.title }}
                             </div>
@@ -65,7 +65,7 @@ current.value = route.path
         margin: auto;
         outline: black dashed;
     }
-    .article-term:hover {
+    .article-term:hover, .article-term:focus {
         background-color: black;
         color: white;
         box-shadow: unset;

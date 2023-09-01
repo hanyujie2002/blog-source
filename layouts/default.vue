@@ -98,6 +98,8 @@
 
         border: double thick;
         box-shadow: 5px 5px; 
+        
+        z-index: 1;
     }
 
     .menu-list :link, .menu-list :visited {
@@ -237,7 +239,7 @@
 
     #content {
         max-width: 100vw;
-        overflow-x: hidden;
+        overflow-x: auto; 
         
         margin-left: 3vw;
         margin-right: 3vw;
