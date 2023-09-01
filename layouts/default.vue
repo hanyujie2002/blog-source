@@ -269,4 +269,9 @@
             display: flex;
         }
     }
+
+    #whole_site ::selection {
+        background-color: black;
+        color: white;
+    }
 </style>
