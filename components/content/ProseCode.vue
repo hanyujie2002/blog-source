@@ -10,5 +10,6 @@
         padding: 0 0.3rem;
         border: thick double white;
         overflow-x: auto;
+        color: white;
     } 
 </style>
