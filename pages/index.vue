@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
     useHead({
-        title: 'Blog',
+        title: 'Yujie Han\'s Blog',
         meta: [
             {
                 name: 'description',

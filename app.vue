@@ -12,6 +12,14 @@ useHead({
     class: 'body'
   }
 })
+
+useSeoMeta ({
+  title: "Yujie Han's blog",
+  ogTitle: "Yujie Han's blog",
+  description: "Love open source, Love open Internet",
+  ogDescription: "Love open source, Love open Internet",
+  ogImage: "/favicon.png"
+})
 </script>
 
 <style>
