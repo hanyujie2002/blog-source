@@ -18,7 +18,9 @@ useSeoMeta ({
   ogTitle: "Yujie Han's blog",
   description: "Love open source, Love open Internet",
   ogDescription: "Love open source, Love open Internet",
-  ogImage: "/favicon.png"
+  ogImage: "/favicon.png",
+  ogSiteName: "YuJie Han's blog",
+  twitterCard: "summary_large_image"
 })
 </script>
 

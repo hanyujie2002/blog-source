@@ -48,6 +48,11 @@
 </template>
 
 <script setup Lang="ts">
+    useSeoMeta ({
+        ogSiteName: "YuJie Han's blog",
+        twitterCard: "summary_large_image"
+    })
+
     const route = useRoute()
     const current = useState('current_page', ()=>'/')
     const isCurrent = (path) => { return route.path === path; }
