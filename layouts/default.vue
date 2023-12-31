@@ -1,49 +1,46 @@
 <template>
-    <div id="whole_site">
-        <div class="wrapper">
-            <div class="nav">
-                <span id="small-screen-menu">
-                    <div id="menu" @click="(event) => {isshowlist=!isshowlist}"><img src="~/assets/img/menu.svg"></div>
-                    <div class="menu-list" v-show="isshowlist">
-                        <NuxtLink to="/" class="option" @click="(event) => {isshowlist = !isshowlist}">Home</NuxtLink>
-                        <NuxtLink to="/about" class="option" @click="(event) => {isshowlist = !isshowlist}">about me</NuxtLink>
+    <div id="main">
+        <nav>
+            <span id="small-screen-menu">
+                <div id="menu" @click="(event) => {isshowlist=!isshowlist}"><img src="~/assets/img/menu.svg"></div>
+                <div class="menu-list" v-show="isshowlist">
+                    <NuxtLink to="/" class="option" @click="(event) => {isshowlist = !isshowlist}">Home</NuxtLink>
+                    <NuxtLink to="/about" class="option" @click="(event) => {isshowlist = !isshowlist}">about me</NuxtLink>
 
-                        <div class="small-screen-languages">
-                            <a style="padding-left: 1rem; border-bottom: double black;">文/A</a>
-                            <!-- language choose -->
-                            <NuxtLink class="option" @click="(event) => {isshowlist = !isshowlist}" to="/blog/en">English ↗</NuxtLink>
-                            <NuxtLink class="option" @click="(event) => {isshowlist = !isshowlist}" to="/blog/zh">中文 ↗</NuxtLink>
-                        </div>
-
+                    <div class="small-screen-languages">
+                        <button style="padding-left: 1rem; border-bottom: double black;">文/A</button>
+                        <!-- language choose -->
+                        <NuxtLink class="option" @click="(event) => {isshowlist = !isshowlist}" to="/blog/en">English ↗</NuxtLink>
+                        <NuxtLink class="option" @click="(event) => {isshowlist = !isshowlist}" to="/blog/zh">中文 ↗</NuxtLink>
                     </div>
-                </span>
+                </div>
+            </span>
 
-                <div id="broad-screen-menu">
-                    <NuxtLink to="/" :class="{current_page: isCurrent('/'), links: true}" style="margin-left: 3vw">Home</NuxtLink>
-                    <NuxtLink to="/about" :class="{links: true, current_page: isCurrent('/about')}">about me</NuxtLink>
+            <div id="broad-screen-menu">
+                <NuxtLink to="/" :class="{current_page: isCurrent('/'), links: true}" style="margin-left: 3vw">Home</NuxtLink>
+                <NuxtLink to="/about" :class="{links: true, current_page: isCurrent('/about')}">about me</NuxtLink>
 
-                    <div style="margin-left: auto;">
-                        <!-- when hover on the button, it shows the language div -->
-                        <div @mouseover="(event)=> {isshowlist=true}" @mouseout="(event)=> {isshowlist=false}" class="language_button">文/A</div>
-                        <div class="languages" v-show="isshowlist" @mouseover="(event)=> {isshowlist=true}" @mouseout="(event)=> {isshowlist=false}">
-                            <!-- language choose -->
-                            <NuxtLink @click="(event) => {isshowlist = !isshowlist}" to="/blog/en" class="option" >English</NuxtLink>
-                            <NuxtLink @click="(event) => {isshowlist = !isshowlist}" to="/blog/zh" class="option">中文</NuxtLink>
-                        </div>
+                <div style="margin-left: auto;">
+                    <!-- when hover on the button, it shows the language div -->
+                    <button id="lang_sel">文/A</button>
+                    <div class="languages">
+                        <!-- language choose -->
+                        <NuxtLink to="/blog/en" class="option" >English</NuxtLink>
+                        <NuxtLink to="/blog/zh" class="option">中文</NuxtLink>
                     </div>
                 </div>
             </div>
+        </nav>
 
-            <!-- <div id="content_wrapper"> -->
-                <div id="content" @click="(event) => {isshowlist=false}">
-                    <slot />
-                </div>
-            <!-- </div> -->
+        <!-- <div id="content_wrapper"> -->
+            <main>
+                <slot />
+            </main>
+        <!-- </div> -->
 
-            <div id="footer">
-                <p>This blog is supported by Nuxt</p>
-            </div>
-        </div>
+        <footer id="footer">
+            <p>This blog is supported by Nuxt</p>
+        </footer>
     </div>
 </template>
 
@@ -63,6 +60,10 @@
 </script>
 
 <style scoped>
+    /* #lan_sel + .languages {
+        display: none;
+    } */
+
     .small-screen-languages {
         display: flex;
         flex-direction: column;
@@ -81,7 +82,6 @@
     #small-screen-menu {
         display: block;
     }
-
 
     #menu {
         width: 100%;
@@ -113,11 +113,7 @@
         text-decoration: none;
     }
 
-    #whole_site {
-        background-color: #fafafa;
-    }
-
-    .nav {
+    nav {
         display: flex;
         /* gap: 1rem; */
         /* justify-content: space-around; */
@@ -127,7 +123,7 @@
         gap: 1vw;
     }
 
-    .nav .links:link, .nav .links:visited {
+    nav .links:link, nav .links:visited {
         font-size: large;
         font-weight: bolder;
         font-family: sans-serif;
@@ -142,18 +138,18 @@
         /* margin-left: 3vw; */
     }
 
-    .nav .links:hover {
+    nav .links:hover {
         color: black;
         text-decoration: underline;
         background-color: #f4f4f5;
         box-shadow: 5px 5px white;
     }
 
-    .nav .links:active {
+    nav .links:active {
         background: white;
     }
 
-    .nav .links.current_page {
+    nav .links.current_page {
         background-color: #f4f4f5;
         color: black;
         box-shadow: 5px 5px white;
@@ -190,7 +186,7 @@
             margin: auto;
         }
     } */
-    .language_button {
+    /* .language_button {
         font-size: large;
         font-weight: bolder;
         font-family: sans-serif;
@@ -209,13 +205,37 @@
         background-color: white;
         color: black;
 
-    }
+    } */
 
     .languages {
+        display: none;
+    }
+
+    #lang_sel {
+        font-size: large;
+        font-weight: bolder;
+        font-family: sans-serif;
+        text-decoration: none;
+
+        border: thick double;
+
+        background-color: black;
+        color: white;
+        padding: 0.5rem 1rem;
+        font-family: sans-serif;
+        
+        margin-right: 3vw;
+    }
+
+    #lang_sel:hover {
+        background-color: white;
+        color: black;
+    }
+
+    #lang_sel:hover+.languages, #lang_sel+.languages:hover {
         display: flex;
         flex-direction: column;
         position: absolute;
-        right: 0rem;
         background-color: white;
         font-size:x-large;
         border: thick double;
@@ -235,14 +255,14 @@
         color: white;
     }
 
-    .wrapper {
+    #main {
         min-height: 100vh;
         display: grid;
         grid-template-rows: auto 1fr auto;
         background-color: white;
     }
 
-    #content {
+    main {
         max-width: 100vw;
         overflow-x: auto; 
         
@@ -251,7 +271,7 @@
     }
 
     @media screen and (min-width: 1000px) {
-        .wrapper {
+        #main {
             max-width: 1000px;
             margin: auto;
         }
@@ -263,7 +283,7 @@
         #content_wrapper {
             border: thick double;
         }
-        #content {
+        main {
         }
 
         #small-screen-menu {
@@ -275,8 +295,4 @@
         }
     }
 
-    #whole_site ::selection {
-        background-color: black;
-        color: white;
-    }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtLayout class="layouts">
+    <NuxtLayout>
         <NuxtPage />
     </NuxtLayout>
   </div>
@@ -27,6 +27,13 @@ useSeoMeta ({
 <style>
   body {
     margin: 0px;
+    background-color: #fafafa;
+  }
+
+  body ::selection {
+      background-color: black;
+      color: white;
+
   }
 
   body::-webkit-scrollbar {
