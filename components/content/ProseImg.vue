@@ -1,10 +1,10 @@
 <template>
-  <div class="prose-img">
+  <figure>
     <img :src="src" :alt="alt" :width="width" :height="height" />
-    <div class="caption" v-if="$slots.caption">
+    <figcaption v-if="$slots.caption">
       <slot name="caption" />
-    </div>
-  </div>
+    </figcaption>
+  </figure>
 </template>
 
 <script setup lang="ts">
@@ -29,27 +29,27 @@ defineProps({
 </script>
 
 <style scoped>
-.prose-img {
-  display: flex;
-  margin: auto;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
+  figure {
+    display: flex;
+    margin: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 
-.prose-img img {
-  display: block;
-  max-width: 98%;
-  margin: auto;
-  border: double thick;
-}
+  img {
+    display: block;
+    max-width: 98%;
+    margin: auto;
+    border: double thick;
+  }
 
-.prose-img .caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 8px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-}
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
 </style>

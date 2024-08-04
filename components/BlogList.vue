@@ -1,20 +1,15 @@
 <template>
-    <div>
-        <h1>Welcome</h1>
-        <main>
-            <ContentList :path="props.lang" v-slot="{ list }">
-                <div class="blog-list">
-                    <div v-for="article in list" :key="article._path">
-                        <NuxtLink class="article-term" :to="article._path" tabindex="0">
-                            <div>
-                            {{ article.title }}
-                            </div>
-                        </NuxtLink>
-                    </div>
-                </div>
-            </ContentList>
-        </main>
-    </div>
+    <main>
+        <ContentList :path="props.lang" v-slot="{ list }">
+            <ul class="blog-list">
+                <li v-for="article in list" :key="article._path">
+                    <NuxtLink class="article" :to="article._path" tabindex="0">
+                        {{ article.title }}
+                    </NuxtLink>
+                </li>
+            </ul>
+        </ContentList>
+    </main>
 </template>
 
 <script setup lang="ts">
@@ -41,34 +36,31 @@ current.value = route.path
 
 <style scoped>
     .blog-list {
+        list-style-type: none;
+        padding: 0;
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        /* border: thick double; */
         width: 100%;
         margin-bottom: 1rem;
     }
 
-    .blog-list :link, .blog-list :visited {
+    .article:link, .article:visited {
         font-size: large;
         font-weight: bolder;
         font-family: sans-serif;
         text-decoration: unset;
-
         color: black;
-        padding: 0.5rem 1rem;
-    }
 
-    .article-term:link, .article-term:visited {
+        padding: 0.5rem 1rem;
         display: block;
         height: 5rem;
-        margin: auto;
         outline: black dashed;
     }
-    .article-term:hover, .article-term:focus {
+
+    .article:hover, .article:focus {
         background-color: black;
         color: white;
-        box-shadow: unset;
         outline: unset;
     }
 </style>

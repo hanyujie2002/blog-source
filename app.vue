@@ -8,9 +8,9 @@
 
 <script setup lang="ts">
 useHead({
-  bodyAttrs: {
-    class: 'body'
-  }
+  // bodyAttrs: {
+  //   class: 'body'
+  // }
 })
 
 useSeoMeta ({
@@ -25,6 +25,10 @@ useSeoMeta ({
 </script>
 
 <style>
+  /* :root {
+    color-scheme: only dark;
+  } */
+
   body {
     margin: 0px;
     background-color: #fafafa;

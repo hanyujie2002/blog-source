@@ -25,7 +25,7 @@
                     <button id="lang_sel">文/A</button>
                     <div class="languages">
                         <!-- language choose -->
-                        <NuxtLink to="/blog/en" class="option" >English</NuxtLink>
+                        <NuxtLink to="/blog/en" class="option">English</NuxtLink>
                         <NuxtLink to="/blog/zh" class="option">中文</NuxtLink>
                     </div>
                 </div>
@@ -228,6 +228,7 @@
     }
 
     #lang_sel:hover {
+        cursor: pointer;
         background-color: white;
         color: black;
     }
@@ -263,7 +264,7 @@
     }
 
     main {
-        max-width: 100vw;
+        /* max-width: 100vw; */
         overflow-x: auto; 
         
         margin-left: 3vw;
